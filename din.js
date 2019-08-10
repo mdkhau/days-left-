@@ -1,19 +1,19 @@
 var DateDiff = {
-
+//days count
     inDays: function(d1, d2) {
         var t2 = d2.getTime();
         var t1 = d1.getTime();
 
         return parseInt((t2-t1)/(24*3600*1000));
     },
-
+//week count
     inWeeks: function(d1, d2) {
         var t2 = d2.getTime();
         var t1 = d1.getTime();
 
         return parseInt((t2-t1)/(24*3600*1000*7));
     },
-
+//month count
     inMonths: function(d1, d2) {
         var d1Y = d1.getFullYear();
         var d2Y = d2.getFullYear();
@@ -22,12 +22,12 @@ var DateDiff = {
 
         return (d2M+12*d2Y)-(d1M+12*d1Y);
     },
-
+//year count
     inYears: function(d1, d2) {
         return d2.getFullYear()-d1.getFullYear();
     }
 }
-
+//get businessdates with startdate and end date parametre
 function getBusinessDatesCount(startDate, endDate) {
     var count = 0;
     var curDate = startDate;
@@ -41,7 +41,7 @@ function getBusinessDatesCount(startDate, endDate) {
 }
 
 function difference(){
- 
+
 
 var d1 = new Date(document.getElementById("date1").value);
 var d2 = new Date(document.getElementById("date2").value);
